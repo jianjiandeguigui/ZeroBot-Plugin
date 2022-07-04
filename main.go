@@ -77,6 +77,7 @@ import (
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/font"     // 渲染任意文字到图片
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/fortune"  // 运势
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/funny"    // 笑话
+
 	// _ "github.com/FloatTech/ZeroBot-Plugin/plugin/genshin"        // 原神抽卡
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/gif"    // 制图
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/github" // 搜索GitHub仓库
@@ -228,7 +229,7 @@ func init() {
 
 	config.W = []*driver.WSClient{driver.NewWebSocketClient(*url, *token)}
 	config.Z = zero.Config{
-		NickName:      append([]string{*adana}, "派蒙","Paimon"),
+		NickName:      append([]string{*adana}, "派蒙", "Paimon"),
 		CommandPrefix: *prefix,
 		SuperUsers:    sus,
 		Driver:        []zero.Driver{config.W[0]},
